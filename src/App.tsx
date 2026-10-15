@@ -30,13 +30,14 @@ function App() {
       <section className="grid-container">
         <div className="grid">
           {numbers.map((number, index) => {
-            const isSelected = number;
+            const isSelected = number !== 0;
             return (
               <button
                 className={`grid-btn ${isSelected ? "selected" : ""}`}
                 key={index}
+                type="button"
                 onClick={() => handleClick(index)}
-                disabled={isSelected ? true : false}
+                disabled={isSelected}
               >
                 {number || ""}
               </button>
@@ -44,7 +45,7 @@ function App() {
           })}
         </div>
         <div>
-          <button className="clear-btn" onClick={clearHandler}>
+          <button type="reset" className="clear-btn" onClick={clearHandler}>
             Clear
           </button>
         </div>

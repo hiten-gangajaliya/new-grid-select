@@ -21,6 +21,11 @@
   border-radius: 5px;
   background-color: #242424;
   border: 1px solid #DDDDDD;
+  cursor: pointer;
+}
+
+.grid-btn:hover {
+  background-color: #F0F0F0;
 }
 
 .selected {
